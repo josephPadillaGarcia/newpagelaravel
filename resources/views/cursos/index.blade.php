@@ -5,9 +5,14 @@
 @section('content')
 
 <h1>Página listas de los cursos</h1>
+<a href="{{ route('cursos.create') }}">Crear Curso</a>
 
 <ul>
-    <li><a href="{{ route('cursos.create') }}">Crear Curso</a></li>
+    @foreach ($cursos as $curso)
+        <li><a href="{{ route('cursos.show', $curso->id) }}">{{ $curso->name }}</a></li>
+    @endforeach
 </ul>
+
+
 
 @endsection

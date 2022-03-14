@@ -23,4 +23,4 @@ Route::get('nosotros',[NosotrosController::class, 'index'])->name('nosotros.inde
 
 Route::get('cursos', [CursosController::class, 'index'])->name('cursos.index');
 Route::get('cursos/create',[CursosController::class, 'create'])->name('cursos.create');
-Route::get('cursos/{curso}', [CursosController::class, 'show'])->name('cursos.show');
+Route::get('cursos/{id}', [CursosController::class, 'show'])->name('cursos.show');
